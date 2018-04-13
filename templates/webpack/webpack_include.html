@@ -1,0 +1,7 @@
+{% load static %}
+
+{% if filetype == 'js' %}
+    <script src="{% static file %}"></script>
+{% elif filetype == 'css' %}
+    <link rel="stylesheet" type="text/css" href="{% static file %}">
+{% endif %}

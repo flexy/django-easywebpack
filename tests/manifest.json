@@ -1,0 +1,8 @@
+{
+  "fileA.js": "fileA.1.js",
+  "fileB.js": "fileB.2.js",
+  "fileC.js": "fileC.3.js",
+  "styleA.css": "styleA.1.css",
+  "styleB.css": "styleB.2.css",
+  "styleC.css": "styleC.3.css"
+}
