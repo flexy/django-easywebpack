@@ -8,7 +8,7 @@ class Command(CollectStaticCommand):
     def handle(self, *args, **kwargs):
         # Build webpack first
         self.stdout.write('Building Webpack...')
-        webpack_build()
+        webpack_build('production')
 
         # Continue with collectstatic
         super().handle(*args, **kwargs)
