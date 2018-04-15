@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+
+[dev-packages]
+bumpversion = "*"
+wheel = "*"
+coverage = "*"
+mock = "*"
+"flake8" = "*"
+tox = "*"
+tox-pipenv = "*"
+codecov = "*"
+
+[requires]
+python_version = "3.6"

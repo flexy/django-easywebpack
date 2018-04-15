@@ -1,0 +1,28 @@
+# Config file for automatic testing at travis-ci.org
+
+language: python
+
+python:
+  - "3.6"
+
+env:
+  - TOX_ENV=py36-django-111
+  - TOX_ENV=py35-django-111
+  - TOX_ENV=py34-django-111
+  - TOX_ENV=py27-django-111
+  - TOX_ENV=py36-django-20
+  - TOX_ENV=py35-django-20
+  - TOX_ENV=py34-django-20
+
+matrix:
+  fast_finish: true
+
+install:
+  - pip install pipenv
+  - pipenv install --system --deploy --dev
+
+script:
+  - tox -e $TOX_ENV
+
+after_success:
+  - codecov -e TOX_ENV
