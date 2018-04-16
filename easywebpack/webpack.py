@@ -1,4 +1,6 @@
+# -*- coding: utf-8 -*-
 import json
+from subprocess import call
 
 from django.conf import settings
 
@@ -22,3 +24,11 @@ def get_manifest_file_and_type(filename):
         'file': file,
         'filetype': type
     }
+
+
+def webpack_build(environment='development'):
+    call([
+        'webpack',
+        f'--env.{environment}',
+        f'--mode={environment}',
+    ])

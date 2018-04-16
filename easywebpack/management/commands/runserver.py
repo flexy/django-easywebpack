@@ -1,8 +1,9 @@
+# -*- coding: utf-8
 from django.contrib.staticfiles.management.commands.runserver import \
     Command as StaticfilesRunserverCommand
 from django.conf import settings
 
-from ..webpack import webpack_build
+from ....webpack import webpack_build
 
 
 class Command(StaticfilesRunserverCommand):
