@@ -10,7 +10,7 @@ from ..webpack import \
 def test_load_webpack_manifest(mocker):
     # Mock and patch
     django_settings_mock = mocker.Mock()
-    django_settings_mock.WEBPACK = {
+    django_settings_mock.EASYWEBPACK = {
         'MANIFEST': '{}/manifest.json'.format(
             os.path.dirname(os.path.abspath(__file__))
         ),

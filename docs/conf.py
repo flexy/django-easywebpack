@@ -47,7 +47,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'django-easywebpack'
-copyright = u'2018, Joshua Smith'
+copyright = u'2018, Fndrz'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -193,7 +193,7 @@ latex_elements = {
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
   ('index', 'django-easywebpack.tex', u'django-easywebpack Documentation',
-   u'Joshua Smith', 'manual'),
+   u'Fndrz', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -223,7 +223,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'django-easywebpack', u'django-easywebpack Documentation',
-     [u'Joshua Smith'], 1)
+     [u'Fndrz'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -237,7 +237,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'django-easywebpack', u'django-easywebpack Documentation',
-   u'Joshua Smith', 'django-easywebpack', 'One line description of project.',
+   u'Fndrz', 'django-easywebpack', 'One line description of project.',
    'Miscellaneous'),
 ]
 
