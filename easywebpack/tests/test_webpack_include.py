@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import pytest  # noqa
 import os
 
@@ -15,7 +16,7 @@ def test_load_webpack_manifest(mocker):
         ),
     }
     mocker.patch(
-        'one_raft_first_site.webpack.webpack.settings',
+        'easywebpack.webpack.settings',
         django_settings_mock,
     )
 
@@ -41,7 +42,7 @@ def test_get_manifest_file_and_type(mocker):
         'test.js': 'test.1.js',
     }
     mocker.patch(
-        'one_raft_first_site.webpack.webpack.load_webpack_manifest',
+        'easywebpack.webpack.load_webpack_manifest',
         load_webpack_manifest_mock
     )
 

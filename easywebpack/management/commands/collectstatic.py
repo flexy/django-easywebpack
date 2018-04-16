@@ -1,7 +1,8 @@
+# -*- coding: utf-8
 from django.contrib.staticfiles.management.commands.collectstatic import \
     Command as CollectStaticCommand
 
-from ..webpack import webpack_build
+from ....webpack import webpack_build
 
 
 class Command(CollectStaticCommand):
