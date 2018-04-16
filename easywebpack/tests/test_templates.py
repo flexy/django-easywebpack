@@ -1,4 +1,5 @@
-import pytest
+# -*- coding: utf-8 -*-
+import pytest  # noqa
 
 from django.template import Context, Template
 
@@ -23,7 +24,7 @@ def render_template(template):
 
 def test_webpack_include_template_when_input_is_a_javascript_file(mocker):
     mocker.patch(
-        'one_raft_first_site.webpack.templatetags.webpack_extras.settings',
+        'easywebpack.templatetags.webpack_extras.settings',
         django_settings_mock
     )
 
@@ -41,7 +42,7 @@ def test_webpack_include_template_when_input_is_a_javascript_file(mocker):
 
 
 def test_webpack_include_template_when_input_is_a_css_file(mocker):
-    mocker.patch('one_raft_first_site.webpack.templatetags.webpack_extras.settings', django_settings_mock)
+    mocker.patch('easywebpack.templatetags.webpack_extras.settings', django_settings_mock)
 
     input = 'styleB.css'
     expected = create_css_link_tag('styleB.2.css')

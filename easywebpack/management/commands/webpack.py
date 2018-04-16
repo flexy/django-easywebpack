@@ -1,6 +1,7 @@
+# -*- coding: utf-8
 from django.core.management.base import BaseCommand
 
-from ..webpack import webpack_build
+from ....webpack import webpack_build
 
 
 class Command(BaseCommand):

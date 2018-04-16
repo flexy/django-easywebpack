@@ -1,3 +1,4 @@
+# -*- coding: utf-8
 from django import template
 
 from ..webpack import get_manifest_file_and_type
