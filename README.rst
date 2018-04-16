@@ -11,7 +11,12 @@ django-easywebpack
 .. image:: https://codecov.io/gh/fndrz/django-easywebpack/branch/master/graph/badge.svg
     :target: https://codecov.io/gh/fndrz/django-easywebpack
 
-Making Django and Webpack best friends
+.. image:: https://readthedocs.org/projects/django-easywebpack/badge/?version=latest
+    :target: http://django-easywebpack.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
+
+
+Making Django and Webpack best friends!
 
 Documentation
 -------------
