@@ -6,7 +6,7 @@ from django.conf import settings
 
 
 def load_webpack_manifest():
-    manifest = str(settings.WEBPACK['MANIFEST'])
+    manifest = str(settings.EASYWEBPACK['MANIFEST'])
 
     with open(manifest) as manifest_file:
         manifest_files = json.load(manifest_file)
