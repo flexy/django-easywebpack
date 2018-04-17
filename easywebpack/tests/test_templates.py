@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 import pytest  # noqa
 
+"""
 from django.template import Context, Template
 
-"""
 def create_template(filename):
     return '{{% load webpack_extras %}} {{% webpack_include "{0}" %}}'.format(filename)
 

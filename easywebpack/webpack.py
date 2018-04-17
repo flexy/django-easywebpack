@@ -29,6 +29,6 @@ def get_manifest_file_and_type(filename):
 def webpack_build(environment='development'):
     call([
         'webpack',
-        f'--env.{environment}',
-        f'--mode={environment}',
+        '--env.{}'.format(environment),
+        '--mode={}'.format(environment),
     ])

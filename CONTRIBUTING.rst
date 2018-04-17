@@ -62,11 +62,11 @@ Ready to contribute? Here's how to set up `django-easywebpack` for local develop
 
     $ git clone git@github.com:your_name_here/django-easywebpack.git
 
-3. Install your local copy into a virtualenv. Assuming you have virtualenvwrapper installed, this is how you set up your fork for local development::
+3. Install requirements and create a development environment::
 
-    $ mkvirtualenv django-easywebpack
-    $ cd django-easywebpack/
-    $ python setup.py develop
+    $ pip install pipenv
+    $ pipenv install --dev
+    $ pipenv shell
 
 4. Create a branch for local development::
 
@@ -77,11 +77,9 @@ Ready to contribute? Here's how to set up `django-easywebpack` for local develop
 5. When you're done making changes, check that your changes pass flake8 and the
    tests, including testing other Python versions with tox::
 
-        $ flake8 easywebpack tests
-        $ python setup.py test
+        $ pytest --flake8
+        $ pytest
         $ tox
-
-   To get flake8 and tox, just pip install them into your virtualenv.
 
 6. Commit your changes and push your branch to GitHub::
 

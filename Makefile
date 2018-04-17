@@ -28,18 +28,16 @@ clean-pyc: ## remove Python file artifacts
 	find . -name '*~' -exec rm -f {} +
 
 lint: ## check style with flake8
-	flake8 easywebpack tests
+	pytest --flake8
 
 test: ## run tests quickly with the default Python
-	python runtests.py tests
+	pytest
 
 test-all: ## run tests on every Python version with tox
 	tox
 
 coverage: ## check code coverage quickly with the default Python
-	coverage run --source easywebpack runtests.py tests
-	coverage report -m
-	coverage html
+	pytest --cov=easywebpack --cov-report html
 	open htmlcov/index.html
 
 docs: ## generate Sphinx HTML documentation, including API docs
