@@ -2,10 +2,13 @@
 Usage
 =====
 
-To use django-easywebpack in a project, add it to your `INSTALLED_APPS`:
+Configuration
+-----------------
 
-  Note: :code:`easywebpack` must be placed before :code:`staticfiles` for
-  :code:`./manage.py` commands to work properly.
+To use django-easywebpack, add it to your `INSTALLED_APPS`:
+
+  Note: :code:`'easywebpack'` must be placed before the :code:`staticfiles` app
+  for the management commands to work properly.
 
 .. code-block:: python
 
@@ -22,22 +25,28 @@ Then, configure it in your Django settings:
         'MANIFEST': 'path/to/manifest.json',
     }
 
-In your templates
+Template tags
 -----------------
 
-First, load the :code:`easywebpack` tags:
+The provided template tags must be loaded before they can be used:
 
 .. code-block:: html
 
     {% load webpack_extras %}
 
-You can then include files from your :code:`webpack.config`:
+``webpack_include``
+~~~~~~~~~~~~~~~~~~~
 
-    Only JS and CSS files are currently supported
+:code:`{% webpack_include filename %}`
+
+Includes a file from the Webpack manifest. Only JS and CSS files are
+currently supported.
+
+Example:
 
 .. code-block:: html
 
-    {% webpack_include filename %}
+    {% load webpack_extras app.js %}
 
 
 Management commands
@@ -46,7 +55,9 @@ Management commands
 ``runserver``
 ~~~~~~~~~~~~~
 
-:code:`django-admin runserver`
+.. code-block::
+
+  django-admin runserver
 
 If :code:`settings.DEBUG` is :code:`True`, this runs webpack with
 :code:`--env.development --mode=development`.
@@ -54,7 +65,9 @@ If :code:`settings.DEBUG` is :code:`True`, this runs webpack with
 ``collectstatic``
 ~~~~~~~~~~~~~~~~~
 
-:code:`django-admin collectstatic`
+.. code-block::
+
+  django-admin collectstatic
 
 If :code:`settings.DEBUG` is :code:`True`, this runs webpack with
 :code:`--env.development --mode=development`.
@@ -64,7 +77,9 @@ Otherwise, it runs webpack with :code:`--env.production --mode=production`.
 ``webpack``
 ~~~~~~~~~~~
 
-:code:`django-admin webpack`
+.. code-block::
+
+  django-admin webpack
 
 This command runs webpack. By default, it uses a :code:`development`
 environment.
