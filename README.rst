@@ -1,6 +1,8 @@
-=============================
+==================
 django-easywebpack
-=============================
+==================
+
+Making Django and Webpack best friends.
 
 .. image:: https://badge.fury.io/py/django-easywebpack.svg
     :target: https://badge.fury.io/py/django-easywebpack
@@ -14,9 +16,6 @@ django-easywebpack
 .. image:: https://readthedocs.org/projects/django-easywebpack/badge/?version=latest
     :target: http://django-easywebpack.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
-
-
-Making Django and Webpack best friends!
 
 Documentation
 -------------
