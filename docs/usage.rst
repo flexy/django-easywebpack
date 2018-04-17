@@ -55,9 +55,7 @@ Management commands
 ``runserver``
 ~~~~~~~~~~~~~
 
-.. code-block::
-
-  django-admin runserver
+:code:`django-admin runserver`
 
 If :code:`settings.DEBUG` is :code:`True`, this runs webpack with
 :code:`--env.development --mode=development`.
@@ -65,9 +63,7 @@ If :code:`settings.DEBUG` is :code:`True`, this runs webpack with
 ``collectstatic``
 ~~~~~~~~~~~~~~~~~
 
-.. code-block::
-
-  django-admin collectstatic
+:code:`django-admin collectstatic`
 
 If :code:`settings.DEBUG` is :code:`True`, this runs webpack with
 :code:`--env.development --mode=development`.
@@ -77,9 +73,7 @@ Otherwise, it runs webpack with :code:`--env.production --mode=production`.
 ``webpack``
 ~~~~~~~~~~~
 
-.. code-block::
-
-  django-admin webpack
+:code:`django-admin webpack`
 
 This command runs webpack. By default, it uses a :code:`development`
 environment.
