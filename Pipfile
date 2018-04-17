@@ -20,6 +20,7 @@ pytest-mock = "*"
 tox = ">=1.7.0"
 tox-pipenv = "*"
 codecov = ">=2.0.0"
+django = "*"
 
 
 [requires]
