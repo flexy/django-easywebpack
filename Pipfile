@@ -1,19 +1,27 @@
 [[source]]
+
 url = "https://pypi.python.org/simple"
 verify_ssl = true
 name = "pypi"
 
+
 [packages]
 
+
+
 [dev-packages]
+
 bumpversion = "*"
 pytest = "*"
 pytest-cov = "*"
 pytest-django = "*"
 pytest-mock = "*"
-pytest-flake8 = "*"
+"pytest-flake8" = "*"
 tox = ">=1.7.0"
+tox-pipenv = "*"
 codecov = ">=2.0.0"
 
+
 [requires]
+
 python_version = "3.6"
