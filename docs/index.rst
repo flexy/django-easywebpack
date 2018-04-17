@@ -28,8 +28,8 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   installation
+   setup
    usage
-   contributing
+   contribution
    authors
    history
