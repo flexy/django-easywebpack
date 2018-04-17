@@ -1,25 +1,10 @@
 # -*- coding: utf-8 -*-
 import pytest  # noqa
-import os
 
-from ..webpack import \
-    load_webpack_manifest, \
-    get_manifest_file_and_type
+from .. import webpack
 
 
 def test_load_webpack_manifest(mocker):
-    # Mock and patch
-    django_settings_mock = mocker.Mock()
-    django_settings_mock.WEBPACK = {
-        'MANIFEST': '{}/manifest.json'.format(
-            os.path.dirname(os.path.abspath(__file__))
-        ),
-    }
-    mocker.patch(
-        'easywebpack.webpack.settings',
-        django_settings_mock,
-    )
-
     # Determine expected values
     expected = {
         'fileA.js': 'fileA.1.js',
@@ -31,7 +16,7 @@ def test_load_webpack_manifest(mocker):
     }
 
     # Verify results
-    actual = load_webpack_manifest()
+    actual = webpack.load_webpack_manifest()
     assert expected == actual
 
 
@@ -55,5 +40,35 @@ def test_get_manifest_file_and_type(mocker):
     }
 
     # Verify results
-    actual = get_manifest_file_and_type(filename)
+    actual = webpack.get_manifest_file_and_type(filename)
     assert expected == actual
+
+
+def test_webpack_build(mocker):
+    # Mock and patch
+    call_mock = mocker.Mock()
+    mocker.patch(
+        'easywebpack.webpack.call',
+        call_mock,
+    )
+
+    # Determine expected values
+    expected_arguments = [
+        'webpack',
+        '--env.development',
+        '--mode=development',
+    ]
+
+    expected_arguments_production = [
+        'webpack',
+        '--env.production',
+        '--mode=production',
+    ]
+
+    # Verify results
+    webpack.webpack_build()
+    call_mock.assert_called_with(expected_arguments)
+
+    # Environment specified
+    webpack.webpack_build('production')
+    call_mock.assert_called_with(expected_arguments_production)

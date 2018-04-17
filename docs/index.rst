@@ -3,15 +3,31 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to django-easywebpack's documentation!
-=================================================================
+==================
+django-easywebpack
+==================
+
+Making Django and Webpack best friends.
+
+.. image:: https://badge.fury.io/py/django-easywebpack.svg
+    :target: https://badge.fury.io/py/django-easywebpack
+
+.. image:: https://travis-ci.org/fndrz/django-easywebpack.svg?branch=master
+    :target: https://travis-ci.org/fndrz/django-easywebpack
+
+.. image:: https://codecov.io/gh/fndrz/django-easywebpack/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/fndrz/django-easywebpack
+
+.. image:: https://readthedocs.org/projects/django-easywebpack/badge/?version=latest
+    :target: http://django-easywebpack.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
 
 Contents:
+---------
 
 .. toctree::
    :maxdepth: 2
 
-   readme
    installation
    usage
    contributing
