@@ -6,7 +6,7 @@ Development Lead
 ----------------
 
 * Joshua Smith <thewanuki@gmail.com>
-* Guy Jacks (fndrz.com and oneraft.com)
+* Guy Jacks <guy.jacks@fndrz.com>
 
 Contributors
 ------------
