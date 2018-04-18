@@ -6,6 +6,7 @@ Development Lead
 ----------------
 
 * Joshua Smith <thewanuki@gmail.com>
+* Guy Jacks <guy.jacks@fndrz.com>
 
 Contributors
 ------------
