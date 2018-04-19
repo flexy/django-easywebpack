@@ -12,6 +12,7 @@ name = "pypi"
 [dev-packages]
 
 bumpversion = "*"
+twine = "*"
 pytest = "*"
 pytest-cov = "*"
 pytest-django = "*"
