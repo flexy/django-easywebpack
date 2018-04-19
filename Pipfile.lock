@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "5eb96403c25add69abb636dfca9b0e21a1e51fa02093ed63d33fc78b93ccfe09"
+            "sha256": "04209cf1928b6158a6241fbddc09968cec92965e90ee748f17fbc73f0ea26bdd"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -53,13 +53,6 @@
             ],
             "markers": "python_version == '2.6'",
             "version": "==1.0.0"
-        },
-        "bumpversion": {
-            "hashes": [
-                "sha256:6744c873dd7aafc24453d8b6a1a0d6d109faf63cd0cd19cb78fd46e74932c77e",
-                "sha256:6753d9ff3552013e2130f7bc03c1007e24473b4835952679653fb132367bdd57"
-            ],
-            "version": "==0.5.3"
         },
         "certifi": {
             "hashes": [
@@ -244,6 +237,12 @@
             ],
             "markers": "sys_platform == 'win32'",
             "version": "==5.3.1"
+        },
+        "punch.py": {
+            "hashes": [
+                "sha256:8b5019319d753108b8a61c3862ab86c41e990d83098dd548f880d92e667725ad"
+            ],
+            "version": "==1.4.4"
         },
         "py": {
             "hashes": [
