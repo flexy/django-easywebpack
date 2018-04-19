@@ -8,10 +8,9 @@ name = "pypi"
 [packages]
 
 
-
 [dev-packages]
 
-bumpversion = "*"
+"punch.py" = "*"
 twine = "*"
 pytest = "*"
 pytest-cov = "*"

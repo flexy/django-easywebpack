@@ -60,7 +60,7 @@ Ready to contribute? Here's how to set up `django-easywebpack` for local develop
 1. Fork the `django-easywebpack` repo on GitHub.
 2. Clone your fork locally::
 
-    $ git clone git@github.com:your_name_here/django-easywebpack.git
+    $ git clone git@github.com:<GitHub username>/django-easywebpack.git
 
 3. Install requirements and create a development environment::
 
@@ -70,7 +70,7 @@ Ready to contribute? Here's how to set up `django-easywebpack` for local develop
 
 4. Create a branch for local development::
 
-    $ git checkout -b name-of-your-bugfix-or-feature
+    $ git checkout -b <bugfix/feature name>
 
    Now you can make your changes locally.
 
@@ -85,7 +85,7 @@ Ready to contribute? Here's how to set up `django-easywebpack` for local develop
 
     $ git add .
     $ git commit -m "Your detailed description of your changes."
-    $ git push origin name-of-your-bugfix-or-feature
+    $ git push origin <bugfix/feature name>
 
 7. Submit a pull request through the GitHub website.
 
@@ -107,4 +107,16 @@ Tips
 
 To run a subset of tests::
 
-    $ python -m unittest tests.test_easywebpack
+    $ pytest <module>
+
+Releasing
+---------
+
+First, run punch to create a version update::
+
+    $ punch --part <major|minor|patch>
+
+Once everything has been merged into master, locally publish the package::
+
+    $ python setup.py sdist bdist_wheel
+    $ twine upload dist/*
