@@ -34,4 +34,5 @@ install:
 script:
   - tox -e $TOX_ENV
 
-after_success: codecov -e TOX_ENV
+after_success:
+  - codecov -e $TOX_ENV

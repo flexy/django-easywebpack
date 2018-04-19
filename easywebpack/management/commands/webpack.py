@@ -4,7 +4,9 @@ from django.core.management.base import BaseCommand
 from easywebpack.webpack import webpack_build
 
 
-class CommandMixin:
+class Command(BaseCommand):
+    help = 'Builds webpack'
+
     def add_arguments(self, parser):
         parser.add_argument(
             '--environment',
@@ -19,7 +21,3 @@ class CommandMixin:
             webpack_build(kwargs['environment'])
         else:
             webpack_build()
-
-
-class Command(CommandMixin, BaseCommand):
-    help = 'Builds webpack'

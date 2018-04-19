@@ -8,7 +8,7 @@ def test_add_arguments(mocker):
     parser_mock = mocker.Mock()
 
     # Setup
-    command = webpack.CommandMixin()
+    command = webpack.Command()
 
     # Check
     command.add_arguments(parser_mock)
@@ -30,7 +30,7 @@ def test_handle(mocker):
     stdout_mock = mocker.Mock()
 
     # Setup
-    command = webpack.CommandMixin()
+    command = webpack.Command()
     command.stdout = stdout_mock
 
     # Environment not provided
