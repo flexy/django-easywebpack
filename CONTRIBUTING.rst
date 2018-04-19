@@ -112,11 +112,18 @@ To run a subset of tests::
 Releasing
 ---------
 
-First, run punch to create a version update::
+First, run Punch to create a version update::
 
     $ punch --part <major|minor|patch>
 
-Once everything has been merged into master, locally publish the package::
+Once everything has been merged into master, build the package::
 
     $ python setup.py sdist bdist_wheel
+
+Then, verify it on TestPyPI::
+
+    $ twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+
+Once everything looks good, upload the package to PyPI::
+
     $ twine upload dist/*
