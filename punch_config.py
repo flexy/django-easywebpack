@@ -15,5 +15,6 @@ VCS = {
     'name': 'git',
     'options': {
         'make_release_branch': False,
+        'target_branch': 'develop',
     }
 }
