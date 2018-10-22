@@ -1,28 +1,23 @@
 # Config file for automatic testing at travis-ci.org
 
 language: python
-
-python:
-  - 3.6
-
+sudo: required
+dist: xenial
+python: "3.7"
 cache: pip
 
-# This fixes: https://github.com/travis-ci/travis-ci/issues/4794
-addons:
-  apt:
-    sources:
-      - deadsnakes
-    packages:
-      - python3.5
-
 env:
-  - TOX_ENV=py36-django-111
-  - TOX_ENV=py35-django-111
-  - TOX_ENV=py34-django-111
   - TOX_ENV=py27-django-111
-  - TOX_ENV=py36-django-20
-  - TOX_ENV=py35-django-20
+  - TOX_ENV=py34-django-111
+  - TOX_ENV=py35-django-111
+  - TOX_ENV=py36-django-111
   - TOX_ENV=py34-django-20
+  - TOX_ENV=py35-django-20
+  - TOX_ENV=py36-django-20
+  - TOX_ENV=py37-django-20
+  - TOX_ENV=py35-django-21
+  - TOX_ENV=py36-django-21
+  - TOX_ENV=py37-django-21
 
 matrix:
   fast_finish: true
