@@ -1,15 +1,11 @@
 [[source]]
-
 url = "https://pypi.python.org/simple"
 verify_ssl = true
 name = "pypi"
 
-
 [packages]
 
-
 [dev-packages]
-
 "punch.py" = "*"
 twine = "*"
 pytest = "*"
@@ -18,11 +14,10 @@ pytest-django = "*"
 pytest-mock = "*"
 "pytest-flake8" = "*"
 tox = ">=1.7.0"
+tox-travis = "*"
 codecov = ">=2.0.0"
 django = ">=2.0.8"
 sphinx = "*"
 
-
 [requires]
-
 python_version = "3.7"
