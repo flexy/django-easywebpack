@@ -18,9 +18,8 @@ pytest-django = "*"
 pytest-mock = "*"
 "pytest-flake8" = "*"
 tox = ">=1.7.0"
-tox-pipenv = "*"
 codecov = ">=2.0.0"
-django = "*"
+django = ">=2.0.8"
 sphinx = "*"
 
 
